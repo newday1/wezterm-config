@@ -9,7 +9,7 @@ if platform.is_mac then
    mod.SUPER = 'SUPER'
    mod.SUPER_REV = 'SUPER|CTRL'
 elseif platform.is_win or platform.is_linux then
-   mod.SUPER = 'CTRL' -- to not conflict with Windows key shortcuts
+   mod.SUPER = 'ALT' -- to not conflict with Windows key shortcuts
    mod.SUPER_REV = 'ALT|CTRL'
 end
 
@@ -212,4 +212,6 @@ return {
    keys = keys,
    key_tables = key_tables,
    mouse_bindings = mouse_bindings,
+   force_reverse_video_cursor = true,
+   hide_mouse_cursor_when_typing = false,
 }
